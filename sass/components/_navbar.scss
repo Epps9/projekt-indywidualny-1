@@ -1,0 +1,30 @@
+.component-navbar {
+    margin: 40px 0; 
+    height: 30px;
+    width: 85%;
+    display: grid;
+    grid-template-columns: 52% 180px 50px 190px 50px;
+    div {
+        border-left: 2px solid lightgray;
+        background-color: white;
+        padding: 10px;
+        border-bottom: 2px solid lightgray;
+        height: inherit;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        h2 {
+            display: inline-block;
+            padding: 0 25px;
+            font-family: $paragraph-font;
+            color: $medium-grey;
+        }
+        a {
+            margin-left: 6px;
+        }
+    }
+    div:last-child {
+        border-right: 2px solid lightgray;
+    }
+
+}

@@ -1,0 +1,67 @@
+button {
+    height: 30px;
+    margin: 7px;
+    font-family: $paragraph-font;
+    font-size: 14px;
+}
+.btn-sm-orange {
+    width: 30px;
+    background-color: $orange;
+    border: 1px solid $orange;
+    border-radius: 3px;
+    img {
+        font-size: 30px;
+        display: inline-block;
+    }
+}
+
+.btn-md-orange {
+    width: 60px;
+    background-color: $orange;
+    border: 1px solid $orange;
+    border-radius: 3px;
+    color: white;
+}
+
+.btn-lg-orange {
+    width: 90px;
+    background-color: $orange;
+    border: 1px solid $orange;
+    border-radius: 3px;
+    color: white;
+}
+
+.btn-md-grey {
+    width: 60px;
+    background-color: grey;
+    border: 1px solid grey;
+    border-radius: 3px;
+    color: white;
+}
+
+.btn-lg-key {
+    width: 90px;
+    background-color: $grey;
+    border: none;
+    border-radius: 3px;
+    color: $medium-grey;
+    &:hover {
+        background-color: none;
+    }
+    .dot {
+        height: 12px;
+        width: 12px;
+        border-radius: 25px;
+        display: inline-block;
+        margin-right: 5px;
+    }
+    .blue {
+        background-color: $blue;
+    }
+    .orange {
+        background-color: $orange;
+    }
+    .green {
+        background-color: green;
+    }
+}

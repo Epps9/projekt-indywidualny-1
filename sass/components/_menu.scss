@@ -1,0 +1,37 @@
+.logo-wrapper {
+    display: flex;
+    i {
+        color: white;
+    }
+}
+.logo {
+    font-family: $logo-font;
+    font-size: 25px;
+    color: white;
+    margin: 15px 0 0 15px;
+}
+.component-menu {
+    display: inline-block;
+    width: 15%;
+    background-color: $dark;
+    border-bottom: 2px solid lightgrey;
+    ol {
+        padding: 0;
+        li {
+        color: lightgrey;
+        padding-left: 15px;
+            h3 {
+                width: 70%;
+                display: inline-block;
+                margin: 0 10px;
+            }
+            img {
+                filter: brightness(150%);   
+            }     
+        }
+        li:hover {
+            background-color: $medium-dark;
+            color: white;
+        }
+    }    
+}

@@ -1,0 +1,28 @@
+.component-table {
+    display: inline-block;
+    max-width: 735px;
+    ol {
+        padding: 0;
+    }
+    ol li {
+        display: flex;
+        background: white;
+        padding: 10px 20px;
+        border-bottom: 2px solid lightgray;
+    }
+    .one {
+        width: 250px;
+        color: $medium-grey;
+    }
+    .two {
+        width: 400px;
+    }
+    .three 
+        img {
+        width: 20px;
+        visibility: hidden;
+            &:hover {
+                visibility: visible;
+            }
+    }
+}

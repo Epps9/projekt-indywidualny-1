@@ -1,0 +1,43 @@
+
+.header-styleguide {
+    color: black;
+    margin: 50px 0;
+    font-size: 30px;
+    text-shadow: 3px 3px white;
+    font-family: $paragraph-font;}
+
+.colors-wrapper {
+    display: flex;
+}
+.color {
+    width: 120px;
+    height: 100px;
+    margin: 5px;
+    border-radius: 5px;
+}
+.color1 {
+    background-color: $grey;
+
+}
+.color2 {
+    background-color: $blue;
+}
+.color3 {
+    background-color: $dark;
+}
+.color4 {
+    background-color: $orange;
+}
+.styleguide-wrapper-1 {
+    display: flex;
+    background-color: #F0F0F0;
+    padding: 40px;
+    border-radius: 20px;
+    .column-1, .column-2 {
+        flex: 50%;
+    }
+    .column-1 {
+        margin-right: 70px; 
+    }
+
+}

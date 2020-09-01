@@ -341,15 +341,15 @@ template {
 }
 
 body {
-  margin: 40px;
   background-color: #CFD0D1;
+  box-sizing: border-box;
 }
 
 h1 {
   color: grey;
   text-transform: uppercase;
   font-family: "Open Sans", Helvetica, Arial;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 h2 {
@@ -361,7 +361,7 @@ h2 {
 h3 {
   color: #6F7174;
   font-family: "Open Sans", Helvetica, Arial;
-  font-size: 14px;
+  font-size: 16px;
   margin: 30px 0;
 }
 
@@ -440,6 +440,7 @@ ol {
   background-color: #F0F0F0;
   padding: 40px;
   border-radius: 20px;
+  margin: 30px;
 }
 
 .styleguide-wrapper-1 .column-1, .styleguide-wrapper-1 .column-2 {
@@ -449,6 +450,23 @@ ol {
 
 .styleguide-wrapper-1 .column-1 {
   margin-right: 70px;
+}
+
+.component-wrapper {
+  margin: 20px 30px;
+}
+
+.styleguide-menu {
+  width: 250px;
+}
+
+.styleguide-navbar {
+  width: 1200px;
+  height: 50px;
+}
+
+.styleguide-background {
+  width: 1200px;
 }
 
 button {
@@ -537,14 +555,15 @@ button {
 
 .logo {
   font-family: "Norican", cursive;
-  font-size: 25px;
+  font-size: 32px;
   color: white;
-  margin: 15px 0 0 15px;
+  margin: 15px;
 }
 
 .component-menu {
   display: inline-block;
-  width: 15%;
+  width: 100%;
+  height: 100%;
   background-color: #1C2021;
   border-bottom: 2px solid lightgrey;
 }
@@ -555,7 +574,7 @@ button {
 
 .component-menu ol li {
   color: lightgrey;
-  padding-left: 15px;
+  padding: 10px 0 10px 15px;
 }
 
 .component-menu ol li h3 {
@@ -574,13 +593,22 @@ button {
 }
 
 .component-navbar {
-  margin: 40px 0;
-  height: 30px;
-  width: 85%;
+  min-height: 50px;
+  min-width: 200px;
+  width: 100%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 52% 180px 50px 190px 50px;
-      grid-template-columns: 52% 180px 50px 190px 50px;
+  -ms-grid-columns: 50% 20% 5% 20% 5%;
+      grid-template-columns: 50% 20% 5% 20% 5%;
+}
+
+.component-navbar .icon {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
 }
 
 .component-navbar div {
@@ -588,11 +616,10 @@ button {
   background-color: white;
   padding: 10px;
   border-bottom: 2px solid lightgray;
-  height: inherit;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -ms-flex-align: center;
       align-items: center;
 }
@@ -619,6 +646,7 @@ button {
 
 .component-table ol {
   padding: 0;
+  margin: 0;
 }
 
 .component-table ol li {
@@ -681,11 +709,10 @@ img:hover {
 }
 
 .component-calendar {
-  margin: 50px 0;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-direction: row;
-      flex-direction: row;
+  -ms-flex-pack: center;
+      justify-content: center;
 }
 
 .component-calendar div {
@@ -719,5 +746,93 @@ img:hover {
 
 .icons img {
   margin: 10px;
+}
+
+.component-background {
+  min-height: 500px;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+}
+
+.component-background h1 {
+  margin: 0;
+  padding: 15px;
+}
+
+.main-page-background {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  border-bottom: 2px solid lightgrey;
+  padding: 30px;
+}
+
+.background-list {
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.background-list ol {
+  min-width: 300px;
+  padding: 0;
+}
+
+.background-list ol li {
+  display: -ms-flexbox;
+  display: flex;
+  height: 70px;
+}
+
+.background-list ol li h3 {
+  width: 80%;
+}
+
+.background-list ol li p {
+  width: 20%;
+  margin: 30px 0;
+  padding: 10px;
+}
+
+.background-list ol li:nth-child(2) {
+  border-bottom: 2px solid lightgrey;
+}
+
+.sections-wrapper {
+  margin: 30px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 300px 1fr;
+      grid-template-columns: 300px 1fr;
+  -ms-grid-rows: (65px)[24];
+      grid-template-rows: repeat(24, 65px);
+  grid-gap: 10px;
+}
+
+.menu {
+  grid-column: 1/2;
+  grid-row: 1/25;
+}
+
+.content {
+  grid-column: 2/3;
+  grid-row: 2/13;
+}
+
+.general-content {
+  display: -ms-grid;
+  display: grid;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+
+.general-content img {
+  height: 300px;
+  width: 600px;
+}
+
+.general-content .background-buttons {
+  margin: 0 auto;
 }
 /*# sourceMappingURL=style.css.map */

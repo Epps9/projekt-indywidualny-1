@@ -1,17 +1,22 @@
 .component-navbar {
-    margin: 40px 0; 
-    height: 30px;
-    width: 85%;
+    min-height: 50px;
+    min-width: 200px;
+    width: 100%;
     display: grid;
-    grid-template-columns: 52% 180px 50px 190px 50px;
+    grid-template-columns: 50% 20% 5% 20% 5%;
+    .icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
     div {
         border-left: 2px solid lightgray;
         background-color: white;
         padding: 10px;
         border-bottom: 2px solid lightgray;
-        height: inherit;
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
         h2 {
             display: inline-block;
@@ -22,6 +27,8 @@
         a {
             margin-left: 6px;
         }
+        
+
     }
     div:last-child {
         border-right: 2px solid lightgray;

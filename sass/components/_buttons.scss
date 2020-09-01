@@ -4,6 +4,10 @@ button {
     font-family: $paragraph-font;
     font-size: 14px;
 }
+
+button:hover {
+    background-color: $dark;
+}
 .btn-sm-orange {
     width: 30px;
     background-color: $orange;

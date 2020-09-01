@@ -47,6 +47,7 @@ img {
     width: 20px;
     display: inline-block;
     vertical-align: middle;
+    filter: inherit(.5);
 }
 
 ol {
@@ -55,6 +56,7 @@ ol {
     list-style-type: none;
     line-height: 2.5;
 }
+
 
 
 

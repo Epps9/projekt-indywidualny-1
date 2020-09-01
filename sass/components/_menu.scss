@@ -16,6 +16,7 @@
     height: 100%;
     background-color: $dark;
     border-bottom: 2px solid lightgrey;
+    position: fixed;
     ol {
         padding: 0;
         li {
@@ -27,7 +28,7 @@
                 margin: 0 10px;
             }
             img {
-                filter: brightness(150%);   
+                filter: invert(.5);   
             }     
         }
         li:hover {

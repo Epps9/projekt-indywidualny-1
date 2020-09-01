@@ -15,29 +15,29 @@
     margin: 5px;
     border-radius: 5px;
 }
-.color1 {
+.primary {
     background-color: $grey;
 
 }
-.color2 {
+.secondary {
     background-color: $blue;
 }
-.color3 {
+.alert {
     background-color: $dark;
 }
-.color4 {
+.danger {
     background-color: $orange;
 }
-.styleguide-wrapper-1 {
+.styleguide-wrapper {
     display: flex;
     background-color: #F0F0F0;
     padding: 40px;
     border-radius: 20px;
     margin: 30px;
-    .column-1, .column-2 {
+    .column {
         flex: 50%;
     }
-    .column-1 {
+    .space {
         margin-right: 70px; 
     }
 }
@@ -52,9 +52,12 @@
 
 .styleguide-navbar {
     width: 1200px;
-    height: 50px;
 }
 
 .styleguide-background {
     width: 1200px;
+}
+
+.space-left {
+    margin-left: 30px;
 }

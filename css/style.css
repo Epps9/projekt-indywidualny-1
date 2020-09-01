@@ -389,6 +389,7 @@ img {
   width: 20px;
   display: inline-block;
   vertical-align: middle;
+  filter: inherit(0.5);
 }
 
 ol {
@@ -418,23 +419,23 @@ ol {
   border-radius: 5px;
 }
 
-.color1 {
+.primary {
   background-color: #D6D9DB;
 }
 
-.color2 {
+.secondary {
   background-color: #82B4BF;
 }
 
-.color3 {
+.alert {
   background-color: #1C2021;
 }
 
-.color4 {
+.danger {
   background-color: #E99043;
 }
 
-.styleguide-wrapper-1 {
+.styleguide-wrapper {
   display: -ms-flexbox;
   display: flex;
   background-color: #F0F0F0;
@@ -443,12 +444,12 @@ ol {
   margin: 30px;
 }
 
-.styleguide-wrapper-1 .column-1, .styleguide-wrapper-1 .column-2 {
+.styleguide-wrapper .column {
   -ms-flex: 50%;
       flex: 50%;
 }
 
-.styleguide-wrapper-1 .column-1 {
+.styleguide-wrapper .space {
   margin-right: 70px;
 }
 
@@ -462,11 +463,14 @@ ol {
 
 .styleguide-navbar {
   width: 1200px;
-  height: 50px;
 }
 
 .styleguide-background {
   width: 1200px;
+}
+
+.space-left {
+  margin-left: 30px;
 }
 
 button {
@@ -474,6 +478,10 @@ button {
   margin: 7px;
   font-family: "Open Sans", Helvetica, Arial;
   font-size: 14px;
+}
+
+button:hover {
+  background-color: #1C2021;
 }
 
 .btn-sm-orange {
@@ -566,6 +574,7 @@ button {
   height: 100%;
   background-color: #1C2021;
   border-bottom: 2px solid lightgrey;
+  position: fixed;
 }
 
 .component-menu ol {
@@ -584,7 +593,7 @@ button {
 }
 
 .component-menu ol li img {
-  filter: brightness(150%);
+  filter: invert(0.5);
 }
 
 .component-menu ol li:hover {
@@ -657,6 +666,10 @@ button {
   border-bottom: 2px solid lightgray;
 }
 
+.component-table ol li:hover {
+  background-color: lightgray;
+}
+
 .component-table .one {
   width: 250px;
   color: #6F7174;
@@ -711,11 +724,11 @@ img:hover {
 .component-calendar {
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
+  -ms-flex-pack: start;
+      justify-content: start;
 }
 
-.component-calendar div {
+.component-calendar .calendar-box {
   background-color: white;
   width: 200px;
   height: 50px;
@@ -727,7 +740,7 @@ img:hover {
       align-items: center;
 }
 
-.component-calendar div p {
+.component-calendar .calendar-box p {
   display: inline-block;
   margin-left: 10px;
   margin-right: auto;
@@ -736,7 +749,7 @@ img:hover {
   color: #6F7174;
 }
 
-.component-calendar div img {
+.component-calendar .calendar-box img {
   padding: 10px;
 }
 
@@ -797,6 +810,10 @@ img:hover {
 
 .background-list ol li:nth-child(2) {
   border-bottom: 2px solid lightgrey;
+}
+
+section {
+  position: relative;
 }
 
 .sections-wrapper {

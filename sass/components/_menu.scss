@@ -1,5 +1,8 @@
 .logo-wrapper {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
     i {
         color: white;
     }
@@ -8,7 +11,7 @@
     font-family: $logo-font;
     font-size: 32px;
     color: white;
-    margin: 15px;
+    margin: 0;
 }
 .component-menu {
     display: inline-block;
@@ -16,7 +19,6 @@
     height: 100%;
     background-color: $dark;
     border-bottom: 2px solid lightgrey;
-    position: fixed;
     ol {
         padding: 0;
         li {
@@ -37,3 +39,79 @@
         }
     }    
 }
+
+.hamburger {
+    height: 30px;
+    padding: 10px;
+    display: inline-block;
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+    margin: 0;
+  }
+   
+  
+  .hamburger__box {
+    width: 35px;
+    height: 24px;
+    display: inline-block;
+    position: relative;
+  }
+  
+  @mixin hamburger-line {
+    width: 100%;
+    height: 3px;
+    background-color: $grey;
+    position: absolute;
+  }
+  
+  .hamburger__inner {
+    @include hamburger-line;
+    
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: background-color .1s .2s ease-in-out;
+  }
+  
+  .hamburger__inner::before,
+  .hamburger__inner::after {
+    @include hamburger-line;
+    
+    content: '';
+    left: 0;
+    transition: transform .2s .2s ease-in-out;
+  } 
+  
+  .hamburger__inner::before {
+    top: -10px;
+  }
+  
+  .hamburger__inner::after {
+    top: 10px;
+  }
+  
+  .hamburger--active .hamburger__inner {
+    background-color: transparent;
+  }
+  
+  .hamburger--active .hamburger__inner:before {
+    transform: translateY(10px) rotate(45deg);
+  }
+  
+  .hamburger--active .hamburger__inner:after {
+    transform: translateY(-10px) rotate(-45deg);
+  }
+
+
+  @media only screen and (max-width: 600px) {
+      .menu--active {
+          width: 90vh;
+          height: 90vh;
+          z-index: 1;
+      }
+      .navbar, .content {
+          z-index: 0;
+      }
+  }
+  

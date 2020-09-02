@@ -8,34 +8,13 @@
 			<link rel="stylesheet" href="css/style.css">
 	  </head>
 	  <body>
-			<section class="navbar">
-				<div class="component-navbar">
-					<div></div>
-					<div>
-						<img src="image/images/icons/wallet.svg">
-						<h2>1,500.00</h2>
-						<img src="image/images/icons/arrow-down-small.svg">
-					</div>
-					<div class="icon">
-						<img src="image/images/icons/notification.svg">
-					</div>
-					<div>
-						<img src="image/images/icons/profile.svg">
-						<a href="#">Leonardo Dicaprio</a>
-					</div>
-					<div class="icon">
-						<img src="image/images/icons/quit.svg">
-					</div>
-				</div>
-			</section>
+		  <div class="sections-wrapper">
 			<section class="menu">
 				<div class="component-menu">
 					<div class="logo-wrapper">
-						<p class="logo">Just do it</p>
-						<button class="hamburger">
-							<span class="hamburger__box">
-								<span class="hamburger__inner"></span>
-							</span>
+						<p class="logo">Just do it
+							<i class="fas fa-bars"></i>
+						</p>
 					</div>
 					<ol>
 						<li>
@@ -55,6 +34,26 @@
 							<h3>Banners</h3>
 						</li>
 					</ol>
+				</div>
+			</section>
+			<section class="navbar">
+				<div class="component-navbar">
+					<div></div>
+					<div>
+						<img src="image/images/icons/wallet.svg">
+						<h2>1,500.00</h2>
+						<img src="image/images/icons/arrow-down-small.svg">
+					</div>
+					<div class="icon">
+						<img src="image/images/icons/notification.svg">
+					</div>
+					<div>
+						<img src="image/images/icons/profile.svg">
+						<a href="#">Leonardo Dicaprio</a>
+					</div>
+					<div class="icon">
+						<img src="image/images/icons/quit.svg">
+					</div>
 				</div>
 			</section>	
 			<section class="content">
@@ -95,7 +94,7 @@
 								</li>
 							</ol>	
 						</div>
-						<h3 class="elem__margin">Earnings chart</h3>
+						<h3>Earnings chart</h3>
 						<div class="background-buttons">
 							<button class="btn-lg-key"><div class="dot blue"></div>Signups</button>
 							<button class="btn-lg-key"><div class="dot orange"></div>FTD</button>
@@ -103,7 +102,38 @@
 						</div>
 						<img src="image/images/chart.png">
 					</div>
+
 			</section>		
+		  </div>
 	  </body>
-	  <script src="js/script.js"></script>
 	</html>
+
+
+
+
+
+
+
+
+
+
+section {
+    position: relative;
+}
+.sections-wrapper {
+    margin: 30px;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: repeat(24, 65px);
+    grid-gap: 10px;
+}
+
+.menu {
+    grid-column: 1/2;
+    grid-row: 1/25;
+}
+
+.content {
+    grid-column: 2/3;
+    grid-row: 2/13;
+}

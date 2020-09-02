@@ -555,6 +555,11 @@ button:hover {
 .logo-wrapper {
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: center;
+      align-items: center;
+  padding: 15px;
 }
 
 .logo-wrapper i {
@@ -565,7 +570,7 @@ button:hover {
   font-family: "Norican", cursive;
   font-size: 32px;
   color: white;
-  margin: 15px;
+  margin: 0;
 }
 
 .component-menu {
@@ -574,7 +579,6 @@ button:hover {
   height: 100%;
   background-color: #1C2021;
   border-bottom: 2px solid lightgrey;
-  position: fixed;
 }
 
 .component-menu ol {
@@ -599,6 +603,76 @@ button:hover {
 .component-menu ol li:hover {
   background-color: #474849;
   color: white;
+}
+
+.hamburger {
+  height: 30px;
+  padding: 10px;
+  display: inline-block;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+}
+
+.hamburger__box {
+  width: 35px;
+  height: 24px;
+  display: inline-block;
+  position: relative;
+}
+
+.hamburger__inner {
+  width: 100%;
+  height: 3px;
+  background-color: #D6D9DB;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: background-color .1s .2s ease-in-out;
+}
+
+.hamburger__inner::before,
+.hamburger__inner::after {
+  width: 100%;
+  height: 3px;
+  background-color: #D6D9DB;
+  position: absolute;
+  content: '';
+  left: 0;
+  transition: transform .2s .2s ease-in-out;
+}
+
+.hamburger__inner::before {
+  top: -10px;
+}
+
+.hamburger__inner::after {
+  top: 10px;
+}
+
+.hamburger--active .hamburger__inner {
+  background-color: transparent;
+}
+
+.hamburger--active .hamburger__inner:before {
+  transform: translateY(10px) rotate(45deg);
+}
+
+.hamburger--active .hamburger__inner:after {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+@media only screen and (max-width: 600px) {
+  .menu--active {
+    width: 90vh;
+    height: 90vh;
+    z-index: 1;
+  }
+  .navbar, .content {
+    z-index: 0;
+  }
 }
 
 .component-navbar {
@@ -764,7 +838,7 @@ img:hover {
 .component-background {
   min-height: 500px;
   height: 100%;
-  width: 100%;
+  width: 97%;
   background-color: white;
 }
 
@@ -812,29 +886,38 @@ img:hover {
   border-bottom: 2px solid lightgrey;
 }
 
-section {
-  position: relative;
+@media only screen and (max-width: 600px) {
+  .general-content {
+    min-width: 200px;
+  }
 }
 
-.sections-wrapper {
-  margin: 30px;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 300px 1fr;
-      grid-template-columns: 300px 1fr;
-  -ms-grid-rows: (65px)[24];
-      grid-template-rows: repeat(24, 65px);
-  grid-gap: 10px;
+.navbar {
+  height: 60px;
+  max-width: 80%;
+  margin-left: 300px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .menu {
-  grid-column: 1/2;
-  grid-row: 1/25;
+  width: 300px;
+  min-height: 1000px;
+  margin-top: -20px;
+  background: #1C2021;
+  position: fixed;
+  top: 20px;
+  left: 0;
 }
 
 .content {
-  grid-column: 2/3;
-  grid-row: 2/13;
+  max-width: 80%;
+  height: 825px;
+  margin-left: 320px;
+  margin-top: 80px;
 }
 
 .general-content {
@@ -851,5 +934,16 @@ section {
 
 .general-content .background-buttons {
   margin: 0 auto;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .menu {
+    display: hidden;
+  }
+  .menu--active {
+    visibility: visible;
+    width: 100%;
+    height: 100%;
+  }
 }
 /*# sourceMappingURL=style.css.map */

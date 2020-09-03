@@ -43,34 +43,16 @@
     .general-content {
         min-width: 200px;
     }
-
-    .general-content img {
-        height: 250px;
-        width: 400px;
-    }
-    .background-list {
-        justify-content: center;
-    }
     .background-list ol {
-        min-width: 180px;
+        min-width: 100px;
     }
 }
 
-@media (max-width: 601px) and (max-width: 900) {
-    @media (max-width: 600px) {
-        .general-content {
-            min-width: 400px;
-        }
-    
-        .general-content img {
-            height: 250px;
-            width: 400px;
-        }
-        .background-list {
-            justify-content: center;
-        }
-        .background-list ol {
-            min-width: 180px;
-        }
+@media (min-width: 601px) and (max-width: 991px) {
+    .general-content {
+        min-width: 200px;
+    }
+    .background-list ol {
+        min-width: 200px;
     }
 }

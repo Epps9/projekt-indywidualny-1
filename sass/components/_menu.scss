@@ -104,14 +104,5 @@
   }
 
 
-  @media only screen and (max-width: 600px) {
-      .menu--active {
-          width: 90vh;
-          height: 90vh;
-          z-index: 1;
-      }
-      .navbar, .content {
-          z-index: 0;
-      }
-  }
+
   

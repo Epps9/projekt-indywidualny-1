@@ -22,3 +22,9 @@
         }
     }
 }
+
+@media (max-width: 600px) {
+    .component-calendar .calendar-box {
+        width: 165px;
+    }
+}

@@ -6,6 +6,7 @@
     h1 {
         margin: 0;
         padding: 15px;
+        border-bottom: 2px solid lightgrey;
     }
 }
 .main-page-background {
@@ -36,6 +37,11 @@
 }
 .background-list ol li:nth-child(2) {
     border-bottom: 2px solid lightgrey;
+}
+
+.links-content {
+    display: flex;
+    justify-content: center;
 }
 
 
@@ -74,3 +80,5 @@
         }
     }
 }
+
+

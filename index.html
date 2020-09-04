@@ -40,19 +40,31 @@
 					<ol>
 						<li>
 							<img src="image/images/icons/general.svg">
-							<h3>General</h3>
+							<a href="index.html">General</a>
 						</li>
 						<li>
 							<img src="image/images/icons/details.svg">
-							<h3>Details</h3>
+							<a href="">Details</a>
 						</li>
 						<li>
 							<img src="image/images/icons/links.svg">
-							<h3>Links</h3>
+							<a href="links.html">Links</a>
 						</li>
 						<li>
 							<img src="image/images/icons/banners.svg">
-							<h3>Banners</h3>
+							<a href="">Banners</a>
+						</li>
+						<li>
+							<img src="image/images/icons/personaldata.svg">
+							<a href="">Personal data</a>
+						</li>
+						<li>
+							<img src="image/images/icons/payout.svg">
+							<a href="">Payout</a>
+						</li>
+						<li>
+							<img src="image/images/icons/postback.svg">
+							<a href="">Postback</a>
 						</li>
 					</ol>
 				</div>
@@ -101,9 +113,12 @@
 							<button class="btn-lg-key"><div class="dot orange"></div>FTD</button>
 							<button class="btn-lg-key"><div class="dot green"></div>Earned</button>
 						</div>
-						<img src="image/images/chart.png">
+						<div class="chart-container">
+							<canvas id="myChart"></canvas>
+						</div>	
 					</div>
 			</section>		
 	  </body>
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
 	  <script src="js/script.js"></script>
 	</html>

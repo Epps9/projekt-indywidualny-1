@@ -1,5 +1,5 @@
 {
-  "name": "javascript-blog",
+  "name": "projekt-indywidualny-1",
   "version": "1.0.0",
   "description": "",
   "main": "index.html",
@@ -10,7 +10,7 @@
     "init:gitignore": "curl https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore -o .gitignore",
     "test": "npm-run-all test:*",
     "test:html": "globstar nu-html-checker *.html",
-    "test:js": "eslint js/",
+    "test:js": "eslint --fix js/",
     "build": "npm-run-all build:* test",
     "build:sass": "node-sass --output-style compact -o css sass",
     "build:autoprefixer": "autoprefixer-cli css/style.css",
